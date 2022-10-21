@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>S 1000RR | BMW Motorad </title>
+    <link rel="shortcut icon" type="image" href="bmw logo.png">
+    <link rel="stylesheet" href="bmw.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+</head>
+<body>
+    <div class="container">
+        <div class="navbar">
+            <img src="menu bar.jpg" class="menubar">
+            <nav>
+                <ul>
+                    <li><a href=""> HOME</a></li>
+                    <li><a href=""> MODEL</a></li>
+                    <li><a href="">location</a></li>
+                </ul>
+            </nav>
+            <img src="logo.png.jpg" class="logo">
+        </div>
+        <div class="row">
+            <div class="color-box"></div>
+            <div class="col-1">
+                <h2>S1000RR</h2><br>
+                <h3>Starting from ₹ 19,75,000.00 <br>
+                Pro : ₹ 21,65,000.00 <br>
+                Pro M Sport : ₹ 23,95,000.00</h3> <br>
+                <button type="button"> PRICE LIST</button><br><br>
+                <div class="button"><button type="button"> TEST RIDE</button></div>
+            </div>
+            <div class="col-2">
+                <img src="wp6179926-honda-vintage-superbikes-hd-wallpapers.png" class="controller">
+            </div>
+        </div>
+    </div>
+    <div class="youtube">
+        <h1>THE BMW S 1000 RR</h1>
+        <h3>THE SUPERBIKE OF SUPERLATIVES.</h3> <br><br>
+        <div class="youbox">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/zj8Bcn_aCzc" title="YouTube video player"
+                frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+            <p>Always pushing to the limit and in search of the ideal line, you've got 152 kW (207 hp) underneath you. Unbridled power
+            pushes your RR to the max - with a maximum torque of 113 Nm at 11,000 rpm and a torque curve of at least 100 Nm over a
+            range of 5,500 to 14,500 [rpm]. Ten years after the first generation of the RR first mesmerized the world of
+            motorcycles, we're now entering the next level of performance. We have revised almost every component of the RR - from
+            the front to the rear. The result: less weight and noticeably higher performance. Are you ready for the pole position
+            and for victory? The RR awaits you.</p>
+            
+        </div>
+    </div>
+    <div class="wallpaper"><img src="BMW-S1000RR-Wallpaper-1920x1080-1 (1).webp" alt="image">
+    </div>
+    <div class="bike">
+        <div class="main-iamge">
+            <img src="bmw pic.JPG" class="pro-img" alt="bikepic"/>
+        </div>
+        <div class="tumb-image">
+            <div class="box" onclick="changeimage(this)"><img src="bmw pic.JPG" alt="tumb">
+            </div>
+            <div class="box"  onclick="changeimage(this)"><img src="bmw pic1.JPG" alt="tumb">
+            </div>
+            <div class="box"  onclick="changeimage(this)"><img src="bmw pic2.JPG" alt="tumb">
+            </div>
+        </div>
+    </div>
+    <script>
+        const tumbs= document.querySelector(".tumb-image").children;
+        function changeimage(event){
+            document.querySelector(".pro-img").src=event.children[0].src
+            for(let i=0; i<tumbs.length; i++){
+                tumbs[i].classList.remove("active");
+            }
+            event.classList.add("active");
+        }
+    </script>
+    <div class="color">
+    <h1>Choose your colour</h1> <br><br>
+    <p>The character of your RR now makes itself felt more clearly than ever before even in the colours. You can choose between
+    the new paint Hockenheim silver metallic and the established colours Racing red and Light white/Racing blue
+    metallic/Racing red.</p>
+    </div>
+    <div class="gallery">
+        <h1>Designed for the pole position.</h1> <br> <br>
+        <p>Anyone who looks at it becomes immediately aware: Here stands a high performance motorcycle. Every part of the RR has
+        been designed to get the most out of it. Take, for instance, the frame layout with its new suspension technology that
+        makes the RR lighter and more precise. In addition, there is the ergonomically perfect seating position, which is
+        unrivalled thanks to the modified frame and fairing design. The standard LED headlights give the bike an absolutely
+        dynamic and aggressive look. The front indicators have wandered from the fairing to the rearview mirrors, which not only
+        looks aesthetically pleasing, but it also provides improved visibility. Seen from the rear, the RR dominates in terms of
+        design and functionality: "All-in-one" is the motto here. In addition to number plate lighting, the number plate holder
+        now also includes LED turn signals, tail lights and brake lights.</p>
+    </div>
+    <div class="gallery1">
+        <!-- Slider main container -->
+        <div class="swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide"><img src="bmw scroll (1).jpg"></div>
+                <div class="swiper-slide"><img src="bmw scroll (2).jpg"></div>
+                <div class="swiper-slide"><img src="bmw scroll (3).jpg"></div>
+                <div class="swiper-slide"><img src="bmw scroll (4).jpg"></div>
+                <div class="swiper-slide"><img src="bmw scroll (5).jpg"></div>
+                ...
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+        
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    
+    <script>
+        const swiper = new Swiper('.swiper', {
+                // Optional parameters
+                loop: true,
+
+                // If we need pagination
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable:true
+                },
+
+                // Navigation arrows
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+            });
+    </script>
+<div class="sound">
+    <h1>EXPERIENCE THE RACING SOUND OF THE RR</h1>
+    <div class="bikesound">
+        <img src="engine sound.jpg" alt="exhust"></div>
+        <button id="btn" onclick="audio.play()";>ENGINE START</button>
+    </div>
+    <script type="text/javascript">
+        const audio =new Audio();
+        audio.src="S 1000 RR _ BMW Motorrad - Google Chrome 2022-10-11 16-49-26 (online-audio-converter.com).mp3"
+    </script>
+</div>
+</body>
+</html>
